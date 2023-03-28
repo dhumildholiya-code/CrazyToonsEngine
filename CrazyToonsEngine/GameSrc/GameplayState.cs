@@ -1,7 +1,7 @@
-﻿using CrazyToonsEngine.src;
-using CrazyToonsEngine.src.InputSystem;
+﻿using CrazyToonsEngine.src.InputSystem;
 using CrazyToonsEngine.src.Objects;
 using CrazyToonsEngine.src.StateMachine;
+using CrazyToonsEngine.src.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace CrazyToonsEngine.src
+namespace CrazyToonsEngine.src.Utilities
 {
     public class Anchor
     {

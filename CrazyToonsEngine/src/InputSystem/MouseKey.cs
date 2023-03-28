@@ -1,17 +1,15 @@
-﻿using Microsoft.Xna.Framework.Input;
-
-namespace CrazyToonsEngine.src.InputSystem
+﻿namespace CrazyToonsEngine.src.InputSystem
 {
-    public struct GameKey
+    public struct MouseKey
     {
-        public Keys key;
+        public int index;
         public bool pressed;
         public bool down;
         public bool released;
 
-        public GameKey(Keys key)
+        public MouseKey(int index)
         {
-            this.key = key;
+            this.index = index;
             pressed = false;
             down = false;
             released = false;

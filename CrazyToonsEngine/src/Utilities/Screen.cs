@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CrazyToonsEngine.src
+namespace CrazyToonsEngine.src.Utilities
 {
     public static class Global
     {

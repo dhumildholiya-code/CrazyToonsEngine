@@ -13,7 +13,7 @@ namespace CrazyToonsEngine.GameSrc
         {
             _sprite = sprite;
             _label = label;
-            _label.anchorPosition = transform.position + Vector2.UnitY * (_sprite.Height + 40f);
+            _label.anchorPosition = transform.position + Vector2.UnitY * (_sprite.TexHeight + 40f);
         }
         public Ball(string name, Transform transform, Sprite sprite, Text label) : base(name, transform)
         {
