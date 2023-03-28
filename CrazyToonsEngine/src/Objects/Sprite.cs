@@ -7,9 +7,6 @@ namespace CrazyToonsEngine.src.Objects
     {
         protected Texture2D texture;
         protected Color color;
-        protected Vector2 position;
-        protected Vector2 scale;
-        protected float rotation;
 
         protected Rectangle DrawRect => new Rectangle((int)position.X, (int)position.Y,
             (int)(texture.Width * scale.X), (int)(texture.Height * scale.Y));
@@ -22,6 +19,7 @@ namespace CrazyToonsEngine.src.Objects
             this.position = position;
             scale = Vector2.One;
             rotation = 0;
+            pivot = new Vector2(texture.Width * .5f, texture.Height * .5f);
         }
         public Sprite(Texture2D texture, Vector2 position, Color color) : this(texture, position)
         {
@@ -38,8 +36,7 @@ namespace CrazyToonsEngine.src.Objects
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            if (!isActive) return;
-            spriteBatch.Draw(texture, DrawRect, null, color);
+            spriteBatch.Draw(texture, DrawRect, null, color, rotation, pivot, SpriteEffects.None, 0f);
         }
 
         public override void Update(GameTime gameTime)

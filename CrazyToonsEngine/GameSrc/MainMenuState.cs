@@ -24,7 +24,8 @@ namespace CrazyToonsEngine.GameSrc
             _testTex.SetData(new Color[] { Color.White });
             _testFont = content.Load<SpriteFont>("TestFont");
 
-            Sprite test = new Sprite(_testTex, Vector2.Zero, Color.White, new Vector2(300, 200));
+            Sprite test = new Sprite(_testTex, new Vector2(Screen.HalfWidth, Screen.HalfHeight),
+                Color.White, new Vector2(300, 200));
             AddGameobject(test);
             Text text = new Text(_testFont, "Testing", Vector2.Zero);
             AddGameobject(text);

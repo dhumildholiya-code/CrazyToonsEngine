@@ -8,6 +8,7 @@ namespace CrazyToonsEngine.src.Objects
         protected string name;
         protected Vector2 position;
         protected Vector2 scale;
+        protected Vector2 pivot;
         protected float rotation;
 
         protected int depth;

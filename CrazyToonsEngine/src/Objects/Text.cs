@@ -5,7 +5,6 @@ namespace CrazyToonsEngine.src.Objects
 {
     public class Text : BaseGameobject
     {
-        public Vector2 position;
         public Vector2 anchorPosition;
         public Color color;
 
@@ -18,6 +17,7 @@ namespace CrazyToonsEngine.src.Objects
 
         public Text(SpriteFont font, string text)
         {
+            isActive = true;
             depth = 1;
             this._font = font;
             this._text = text;

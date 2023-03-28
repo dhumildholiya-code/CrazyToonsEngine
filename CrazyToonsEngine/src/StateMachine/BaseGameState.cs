@@ -26,7 +26,10 @@ namespace CrazyToonsEngine.src.StateMachine
             IGameobject[] orderedByDepth = gameObjects.OrderBy(x => x.Depth).ToArray();
             for (int i = orderedByDepth.Length - 1; i >= 0; i--)
             {
-                orderedByDepth[i].Draw(spriteBatch, gameTime);
+                if (orderedByDepth[i].IsActive())
+                {
+                    orderedByDepth[i].Draw(spriteBatch, gameTime);
+                }
             }
         }
         public void Update(GameTime gameTime)
@@ -34,10 +37,13 @@ namespace CrazyToonsEngine.src.StateMachine
             HandleInput();
             for (int i = gameObjects.Count() - 1; i >= 0; i--)
             {
-                gameObjects[i].Update(gameTime);
+                if (gameObjects[i].IsActive())
+                {
+                    gameObjects[i].Update(gameTime);
+                }
             }
         }
-         
+
         protected void ChangeState(BaseGameState newState)
         {
             RequestStateChange?.Invoke(this, newState);
