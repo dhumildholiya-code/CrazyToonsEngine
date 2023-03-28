@@ -24,14 +24,16 @@ namespace CrazyToonsEngine.GameSrc
             _testTex.SetData(new Color[] { Color.White });
             _testFont = content.Load<SpriteFont>("TestFont");
 
-            Sprite test = new Sprite(_testTex, new Vector2(Screen.HalfWidth, Screen.HalfHeight),
-                Color.White, new Vector2(300, 200));
-            AddGameobject(test);
-            Text text = new Text(_testFont, "Testing", Vector2.Zero);
-            AddGameobject(text);
-            Text text1 = new Text(_testFont, "Testing 1", Vector2.Zero, Anchor.TopCenter);
+            Transform ballTransform = new Transform(new Vector2(Screen.HalfWidth, Screen.HalfHeight));
+            Sprite ballSprite = new Sprite("Test", _testTex, ballTransform);
+            ballSprite.transform.scale = new Vector2(300, 200);
+            Text ballLabel = new Text("Test Label", _testFont, "Testing", ballTransform);
+            Ball ball = new Ball("Ball", ballTransform, ballSprite, ballLabel);
+            AddGameobject(ball);
+
+            Text text1 = new Text("Text 1",_testFont, "Testing 1", Vector2.Zero, Anchor.TopCenter);
             AddGameobject(text1);
-            Text text2 = new Text(_testFont, "Testing 2", Vector2.Zero, Anchor.BottomCenter);
+            Text text2 = new Text("Text 2", _testFont, "Testing 2", Vector2.Zero, Anchor.BottomCenter);
             AddGameobject(text2);
         }
 

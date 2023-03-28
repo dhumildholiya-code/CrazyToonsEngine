@@ -22,7 +22,9 @@ namespace CrazyToonsEngine.GameSrc
             _testTex = new Texture2D(Global.GraphicsDevice, 1, 1);
             _testTex.SetData(new Color[] { Color.White });
 
-            Sprite test = new Sprite(_testTex, Vector2.Zero, Color.Green, new Vector2(300, 200));
+            Sprite test = new Sprite("Test", _testTex, Vector2.Zero);
+            test.Color = Color.Green;
+            test.transform.scale = new Vector2(300, 200);
             AddGameobject(test);
         }
 

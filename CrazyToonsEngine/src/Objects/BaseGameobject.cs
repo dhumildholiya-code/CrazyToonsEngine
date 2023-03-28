@@ -1,18 +1,36 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System.Runtime.CompilerServices;
 
 namespace CrazyToonsEngine.src.Objects
 {
     public abstract class BaseGameobject : IGameobject
     {
         protected string name;
-        protected Vector2 position;
-        protected Vector2 scale;
-        protected Vector2 pivot;
-        protected float rotation;
+        public Transform transform;
 
         protected int depth;
         protected bool isActive;
+
+        #region Constructors
+        public BaseGameobject(string name)
+        {
+            depth = 0;
+            isActive = true;
+            this.name = name;
+            transform = new Transform();
+        }
+        public BaseGameobject(string name, Vector2 pos) : this(name)
+        {
+            transform = new Transform(pos);
+        }
+        public BaseGameobject(string name, Transform transform) : this(name)
+        {
+            this.transform = transform;
+        }
+
+        #endregion
 
         public string Name
         {
