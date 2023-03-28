@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyToonsEngine", "CrazyToonsEngine\CrazyToonsEngine.csproj", "{4CD0445A-3BC4-4315-ADFE-D103828316C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{0F28AEA2-D50C-4C53-A850-ED785803AE1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD0445A-3BC4-4315-ADFE-D103828316C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD0445A-3BC4-4315-ADFE-D103828316C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD0445A-3BC4-4315-ADFE-D103828316C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD0445A-3BC4-4315-ADFE-D103828316C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F28AEA2-D50C-4C53-A850-ED785803AE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F28AEA2-D50C-4C53-A850-ED785803AE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F28AEA2-D50C-4C53-A850-ED785803AE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F28AEA2-D50C-4C53-A850-ED785803AE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {232DE1F8-B22C-4EE0-9824-2AFD0D441E42}
+	EndGlobalSection
+EndGlobal
