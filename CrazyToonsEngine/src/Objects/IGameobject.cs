@@ -5,7 +5,7 @@ namespace CrazyToonsEngine.src.Objects
 {
     public interface IGameobject
     {
-        public string Name { get; }
+        public string Name { get; set; }
         public int Depth { get; }
         public bool IsActive();
         public void SetActive(bool active);
