@@ -16,6 +16,9 @@ namespace CrazyToonsEngine.src.Objects
         public Vector2 anchorPosition;
 
         public Vector2 globalPositon => transform.position + anchorPosition;
+        public Rectangle Rect => new Rectangle((int)(globalPositon.X - pivot.X * transform.scale.X),
+                (int)(globalPositon.Y - pivot.Y * transform.scale.Y),
+                (int)(Width), (int)(Height));
 
         public Button(string name, Texture2D texture, Vector2 position, Vector2 anchorPosition) : base(name, texture, position)
         {
@@ -40,13 +43,10 @@ namespace CrazyToonsEngine.src.Objects
 
         public override void Update(GameTime gameTime)
         {
-            Rectangle buttonRect = new Rectangle((int)(globalPositon.X - pivot.X * transform.scale.X),
-                (int)(globalPositon.Y - pivot.Y * transform.scale.Y),
-                (int)(Width), (int)(Height));
             Point mousePos = Input.GetMousePosition();
             Rectangle mousePointRect = new Rectangle(mousePos.X, mousePos.Y, 1, 1);
 
-            if (buttonRect.Intersects(mousePointRect))
+            if (Rect.Intersects(mousePointRect))
             {
                 color = hoverColor;
                 if (Input.GetMouseButton(0))

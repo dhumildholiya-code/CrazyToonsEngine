@@ -6,6 +6,7 @@ namespace CrazyToonsEngine.src.Objects
 {
     public class Text : BaseGameobject
     {
+        public Texture2D debugTex;
         public Vector2 anchorPosition;
         public Color color;
 
@@ -14,6 +15,10 @@ namespace CrazyToonsEngine.src.Objects
 
         private Vector2 _pivot;
         private Vector2 _textSize;
+        public Vector2 globalPositon => transform.position + anchorPosition;
+        public Rectangle Rect => new Rectangle((int)(globalPositon.X - _pivot.X * transform.scale.X),
+                (int)(globalPositon.Y - _pivot.Y * transform.scale.Y),
+                (int)(_textSize.X), (int)(_textSize.Y));
 
 
         #region Constructors
@@ -44,6 +49,10 @@ namespace CrazyToonsEngine.src.Objects
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            if(debugTex != null)
+            {
+                spriteBatch.Draw(debugTex, Rect, Color.Red);
+            }
             spriteBatch.DrawString(_font, _text, anchorPosition + transform.position, color, 0f, _pivot, 1f, SpriteEffects.None, 0f);
         }
 

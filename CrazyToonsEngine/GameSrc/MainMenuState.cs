@@ -28,19 +28,7 @@ namespace CrazyToonsEngine.GameSrc
             _ballTex = content.Load<Texture2D>("ball");
             _testFont = content.Load<SpriteFont>("TestFont");
 
-            Button button = new Button("Button", _testTex, Vector2.Zero, Anchor.MiddleCenter);
-            button.transform.scale *= 100f;
-            button.OnClick += HandleClick;
-            AddGameobject(button);
-
-            //Transform ballTransform = new Transform(new Vector2(Screen.HalfWidth, Screen.HalfHeight));
-            //Sprite ballSprite = new Sprite("Test", _testTex, ballTransform);
-            //ballSprite.transform.scale = new Vector2(300, 200);
-            //Text ballLabel = new Text("Test Label", _testFont, "Testing", new Vector2(0, -150), ballTransform.position);
-            //Ball ball = new Ball("Ball", ballTransform, ballSprite, ballLabel);
-            //AddGameobject(ball);
-
-            text1 = new Text("Text 1",_testFont, "Testing 1", Vector2.Zero, Anchor.TopCenter);
+            text1 = new Text("Text 1",_testFont, "Testing dfasjdfas\nfajskdfjas1", Vector2.Zero, Anchor.MiddleCenter);
             AddGameobject(text1);
             Text text2 = new Text("Text 2", _testFont, "Testing 2", Vector2.Zero, Anchor.BottomCenter);
             AddGameobject(text2);
